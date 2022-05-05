@@ -3,7 +3,7 @@ package org.openmetadata.catalog.selenium.pages.common;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v95.fetch.Fetch;
+import org.openqa.selenium.devtools.v101.fetch.Fetch;
 
 @RequiredArgsConstructor
 public class Interceptor {

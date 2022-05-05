@@ -25,18 +25,18 @@ public final class Events {
   private Events() {}
 
   public static void click(WebDriver driver, By by) {
-    (new WebDriverWait(driver, 15)).until(ExpectedConditions.elementToBeClickable(by));
+    (new WebDriverWait(driver, Duration.ofSeconds(15))).until(ExpectedConditions.elementToBeClickable(by));
     driver.findElement(by).click();
   }
 
   public static void sendKeys(WebDriver driver, By by, String sendKeys) {
-    (new WebDriverWait(driver, 15)).until(ExpectedConditions.elementToBeClickable(by));
+    (new WebDriverWait(driver, Duration.ofSeconds(15))).until(ExpectedConditions.elementToBeClickable(by));
     driver.findElement(by).sendKeys(sendKeys);
   }
 
   public static WebElement waitForElementToDisplay(WebDriver driver, By by, int timeOutSec, int pollingSec) {
     FluentWait<WebDriver> fWait =
-        new FluentWait<WebDriver>(driver)
+        new FluentWait<>(driver)
             .withTimeout(Duration.ofSeconds(timeOutSec))
             .pollingEvery(Duration.ofSeconds(pollingSec))
             .ignoring(NoSuchElementException.class, TimeoutException.class)
@@ -56,7 +56,7 @@ public final class Events {
   }
 
   public static void sendEnter(WebDriver driver, By by) {
-    (new WebDriverWait(driver, 15)).until(ExpectedConditions.elementToBeClickable(by));
+    (new WebDriverWait(driver, Duration.ofSeconds(15))).until(ExpectedConditions.elementToBeClickable(by));
     driver.findElement(by).sendKeys(Keys.ENTER);
   }
 }

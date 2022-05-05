@@ -17,7 +17,7 @@ import org.openmetadata.catalog.selenium.properties.Property;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v95.fetch.Fetch;
+import org.openqa.selenium.devtools.v101.fetch.Fetch;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
